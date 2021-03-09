@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quizzo</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="home-box custom-box ">
+		<div>
+			<h1>Instructions</h1>
+			<p class="field instructions">1.Total Number of Questions:<span class="total-question"></span>.</p>
+			<p class="field instructions">1.Time Limit to complete exam is 30 minutes.</p>
+			<p class="field instructions">2.Option once selected cannot be reselected.</p>
+			<p class="field instructions">3.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			consequat.</p> 
+			<p class="field instructions">4.tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+			<p class="field instructions">5.quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+			<p class="field instructions">6.Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur.</p>
+			<p class="field instructions">7.Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
+	</div>
+
+	<div class="quiz-box custom-box hide">
+		<div class="question-number">
+			
+		</div>
+		<div class="question-text">
+			
+		</div>
+		<div class="option-container">
+			<!--<div class="option">15</div>
+			<div class="option">11</div>
+			<div class="option">12</div>
+			<div class="option">13</div>-->
+		</div>
+		<div class="next-question-btn">
+			<button type="button" class="btn" onclick="next()">Next</button>
+		</div>
+		<div class="answers-indicator">
+			<!--<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>-->
+		</div>
+	</div>
+
+	<div class="result-box custom-box hide">
+		<h1>Quiz Result</h1>
+		<table>
+			<tr>
+				<td>Total Questions</td>
+				<td><span class="total-question"></span></td>
+			</tr>
+			<tr>
+				<td>Attempt</td>
+				<td><span class="total-attempt"></span></td>
+			</tr>
+			<tr>
+				<td>Correct</td>
+				<td><span class="total-correct"></span></td>
+			</tr>
+			<tr>
+				<td>Wrong</td>
+				<td><span class="total-wrong"></span></td>
+			</tr>
+			<tr>
+				<td>Percentage</td>
+				<td><span class="total-percentage"></span></td>
+			</tr>
+			<tr>
+				<td>Total Score</td>
+				<td><span class="total-score"></span></td>
+			</tr>
+		</table>
+		<button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+		<button type="button" class="btn" onclick="goToHome()">Go to Home</button>
+	</div>
+	<script src="latest.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
