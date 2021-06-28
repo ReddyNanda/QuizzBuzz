@@ -1,0 +1,94 @@
+extends header3
+block content
+   .container         
+    #Qform.col-lg-12.col-md-12
+      form.addq-form(action='/users/'+user+"/"+testid, method='post')
+        h1.text-center Enter Question 
+        p.text-center(style="color:red")=message
+        
+        div
+          label Question&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+          |         
+          input(type='text',name='title', placeholder='Enter the question')
+        |         
+        
+        |         
+        div
+          label Options&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+          |         
+          input(type='text', name='options', placeholder='Enter options seperated by &')
+        |         
+        div
+          label Correct answer&nbsp;:
+          |         
+          input(type='text', name='answer', placeholder='Enter correct answer option/answer')
+        |     
+        div
+          button.text-center  Upload Question 
+    footer#footer
+      .footer-top
+        .container.text-center
+          .row
+            
+            .footer-links
+              h4 Useful Links
+              |             
+              ul
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Home
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#about') About us
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#services') Services
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Terms of service
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Privacy policy
+            
+      |     
+      .container.text-center
+        .row.text-center
+          .copyright
+            | &copy; Copyright 
+            strong
+              span QuizzBuzz
+            | . All Rights Reserved
+          |         
+          .credits
+           
+            | Frontend template design 
+            a(href='https://bootstrapmade.com/') BootstrapMade
+    // End Footer
+    #preloader
+    |   
+    a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
+    // Vendor JS Files
+    script(src='../../../assets/vendor/aos/aos.js')
+    |   
+    script(src='../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    |   
+    script(src='../../../assets/vendor/glightbox/js/glightbox.min.js')
+    |   
+    script(src='../../../assets/vendor/isotope-layout/isotope.pkgd.min.js')
+    |   
+    
+    script(src='../../../assets/vendor/swiper/swiper-bundle.min.js')
+    // Template Main JS File
+    script(src='../../../assets/js/main.js')
+
+    

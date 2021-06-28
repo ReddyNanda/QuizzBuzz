@@ -1,0 +1,198 @@
+extends header 
+block content 
+   section.test-container
+    .details-box.custom-box
+      form
+        // axn should have server location
+        h1.text-center Start Quiz
+        | &#x9;&#x9;&#x9;
+        #notentered.text-center(style="color:red;margin-bottom:5px")
+
+        .form-box.text-center
+          label(for='firstname') FirstName
+          | &#x9;&#x9;    
+          input#firstname(type='text', placeholder='FirstName',required="true")
+        | &#x9;&#x9;&#x9;
+        .form-box.text-center
+          label(for='lastname') LastName
+          | &nbsp;
+          | &#x9;&#x9;    
+          input#lastname(type='text', placeholder='LastName',required="true")
+        | &#x9;&#x9;    
+        .form-box.text-center
+          label(for='email') Email
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          | &#x9;&#x9;    
+          input#email(type='email', placeholder='Email',required="true")
+        | &#x9;&#x9;    
+        .form-box.text-center
+          label(for='rollno') Roll No
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+          input#rollno(type='text', placeholder='RollNo',required="true")
+            
+        .form-box.text-center
+          label(for='testid') Test Id
+          | &nbsp;&nbsp;&nbsp;
+           
+          input#testid(type='text', placeholder='TestId',required="true")
+        
+        .form-box.text-center
+          button#btn Submit
+        |             
+        #msg
+          pre.
+            
+    | &#x9;
+    .home-box.custom-box.hide
+      div
+        h1 Instructions
+        | &#x9;&#x9;&#x9;
+        
+        p.field.instructions 1.Please go through the below instructions before you start 
+        | &#x9;&#x9;&#x9;
+        p.field.instructions 2.Option once selected cannot be reselected.
+        | &#x9;&#x9;&#x9;
+        p.field.instructions
+          | 3.You will be able to access test once you click "Start Test" Button
+        |  
+        | &#x9;&#x9;&#x9;
+        p.field.instructions 4.Your result will be displayed at the end after all the questions
+        | &#x9;&#x9;&#x9;
+        p.field.instructions 5.You can re-attempt the quiz however each attempt will be noted 
+        | &#x9;&#x9;&#x9;
+        p.field.instructions 6.You can attempt a question only once and cannot be visited back 
+        | &#x9;&#x9;&#x9;
+
+      button.btn(type='button', onclick='startQuiz()') Start Quiz
+    | &#x9;
+    .quiz-box.custom-box.hide
+      .question-number
+      | &#x9;&#x9;
+      .question-text
+      | &#x9;&#x9;
+      .option-container
+        //
+          <div class="option">15</div>
+          <div class="option">11</div>
+          <div class="option">12</div>
+          <div class="option">13</div>
+      | &#x9;&#x9;
+      .next-question-btn
+        button.btn#check(type='button', onclick='next()') Next
+      | &#x9;&#x9;
+      .answers-indicator
+        //
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+    | &#x9;
+    .result-box.custom-box.hide
+      h1 Quiz Result
+      | &#x9;&#x9;
+      table
+        tr
+          td Total Questions
+          | &#x9;&#x9;&#x9;&#x9;
+          td
+            span.total-question
+        | &#x9;&#x9;&#x9;
+        tr
+          td Attempt
+          | &#x9;&#x9;&#x9;&#x9;
+          td
+            span.total-attempt
+        | &#x9;&#x9;&#x9;
+        tr
+          td Correct
+          | &#x9;&#x9;&#x9;&#x9;
+          td
+            span.total-correct
+        | &#x9;&#x9;&#x9;
+        tr
+          td Wrong
+          | &#x9;&#x9;&#x9;&#x9;
+          td
+            span.total-wrong
+        | &#x9;&#x9;&#x9;
+        tr
+          td Percentage
+          | &#x9;&#x9;&#x9;&#x9;
+          td
+            span.total-percentage
+        | &#x9;&#x9;&#x9;
+        tr
+          td Total Score
+          | &#x9;&#x9;&#x9;&#x9;
+          td
+            span.total-score
+      | &#x9;&#x9;
+      button.btn(type='button', onclick='tryAgainQuiz()') Try Again
+      | &#x9;&#x9;
+      a.btn( href='/') Go to Home
+    
+     script(src='../javascripts/testapp.js') 
+    footer#footer
+      .footer-top
+        .container.text-center
+          .row
+            
+            .footer-links
+              h4 Useful Links
+              |             
+              ul
+                span
+                    
+                  a(href='#') Home
+                |               
+                span
+                   
+                  a(href='#about') About us
+                |               
+                span
+                    
+                  a(href='#services') Services
+                |               
+                span
+                    
+                  a(href='#') Terms of service
+                |               
+                span
+                   
+                  a(href='#') Privacy policy
+            
+      |     
+      .container.text-center
+        .row.text-center
+          .copyright
+            | &copy; Copyright 
+            strong
+              span QuizzBuzz
+            | . All Rights Reserved
+          |         
+          .credits
+           
+            | Frontend template design 
+            a(href='https://bootstrapmade.com/') BootstrapMade
+    // End Footer
+    #preloader
+    |   
+    a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
+    // Vendor JS Files
+    script(src='assets/vendor/aos/aos.js')
+    |   
+    script(src='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    |   
+    script(src='assets/vendor/glightbox/js/glightbox.min.js')
+    |   
+    script(src='assets/vendor/isotope-layout/isotope.pkgd.min.js')
+    |   
+    
+    script(src='assets/vendor/swiper/swiper-bundle.min.js')
+    // Template Main JS File
+    script(src='assets/js/main.js')
+
+    

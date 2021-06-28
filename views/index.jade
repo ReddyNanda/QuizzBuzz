@@ -1,0 +1,219 @@
+extends header 
+block content    
+    section#hero.d-flex.align-items-center
+      .container.position-relative(data-aos='fade-up', data-aos-delay='100')
+        .row.justify-content-center
+          .col-xl-7.col-lg-9.text-center
+            h1 QuizzBuzz
+            |           
+            h2 create and attempt quizzes
+        |       
+        .text-center
+          a.btn-get-started.scrollto(href='/attempt') Attempt Quiz
+        .row.icon-boxes
+          .col-md-6.col-lg-3.d-flex.align-items-stretch.mb-5.mb-lg-0(data-aos='zoom-in', data-aos-delay='200')
+            .icon-box
+              
+              |             
+              h4.title
+                a(href='/attempt') Sample test 1
+              |             
+              p.description To attempt this test click on the above link and enter test id as "sample1"
+          |         
+          .col-md-6.col-lg-3.d-flex.align-items-stretch.mb-5.mb-lg-0(data-aos='zoom-in', data-aos-delay='300')
+            .icon-box
+                        
+              h4.title
+                a(href='/attempt') Sample test 2
+              |             
+              p.description To attempt this test click on the above link and enter test id as "sample2"
+          |         
+          .col-md-6.col-lg-3.d-flex.align-items-stretch.mb-5.mb-lg-0(data-aos='zoom-in', data-aos-delay='400')
+            .icon-box
+              
+              h4.title
+                a(href='/attempt') Sample test 3
+              |             
+              p.description To attempt this test click on the above link and enter test id as "sample3"
+          |         
+          .col-md-6.col-lg-3.d-flex.align-items-stretch.mb-5.mb-lg-0(data-aos='zoom-in', data-aos-delay='500')
+            .icon-box
+              
+              |             
+              h4.title
+                a(href='/attempt') Sample test 4
+              |             
+              p.description To attempt this test click on the above link and enter test id as "sample4"
+
+    // End Hero
+    main#main
+      // ======= About Section =======
+      section#about.about
+        .container(data-aos='fade-up')
+          .section-title
+            h2 About Us
+            |           
+            p Quizzo is a teacher-student friendly web application for all their examinations.
+          |         
+          .row.content
+            .col-lg-6
+              p
+                | Quizzo provides a wide range of features for all your examinations.
+              |             
+              ul
+                li
+                  i.ri-check-double-line
+                  |  Instructor can assign questions in random order.
+                |               
+                li
+                  i.ri-check-double-line
+                  |  Instructor can add and delete any number of questions.
+                |               
+                li
+                  i.ri-check-double-line
+                  |  Instructor can do a detailed analysis of all students.
+            |           
+            .col-lg-6.pt-4.pt-lg-0
+              p
+                | Quizzo provides a wide range of features for instructors to conduct quizzes with features like questions in random order to every student ensuring minimum copy during exam.Also user can add or delete any number of questions at the rate of their comfort.And its very easy for instructor to analyse the results of all students.
+              |             
+              a.btn-learn-more(href='#') Learn More
+      // End About Section
+      
+      section#faq.faq.section-bg
+        .container(data-aos='fade-up')
+          .section-title
+            h2 Frequently Asked Questions
+            // <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          |         
+          .faq-list
+            ul
+              li(data-aos='fade-up')
+                i.bx.bx-help-circle.icon-help
+                |  
+                a.collapse(data-bs-toggle='collapse', data-bs-target='#faq-list-1')
+                  | How can i create a new quiz?
+                  i.bx.bx-chevron-down.icon-show
+                  i.bx.bx-chevron-up.icon-close
+                |               
+                #faq-list-1.collapse.show(data-bs-parent='.faq-list')
+                  p
+                    | You can create a new quiz on clicking a create test button at right top of page.
+              |             
+              li(data-aos='fade-up')
+                i.bx.bx-help-circle.icon-help
+                |  
+                a.collapsed(data-bs-toggle='collapse', data-bs-target='#faq-list-2')
+                  | Should instructor specify the number of questions before creating test? 
+                  i.bx.bx-chevron-down.icon-show
+                  i.bx.bx-chevron-up.icon-close
+                |               
+                #faq-list-2.collapse(data-bs-parent='.faq-list')
+                  p
+                    | NO,Instructor can add any number of questions,also instructor can delete questions in between if he wishes to do so.
+              |             
+              li(data-aos='fade-up')
+                i.bx.bx-help-circle.icon-help
+                |  
+                a.collapsed(data-bs-toggle='collapse', data-bs-target='#faq-list-3')
+                  | How can i attempt a particular quiz? 
+                  i.bx.bx-chevron-down.icon-show
+                  i.bx.bx-chevron-up.icon-close
+                |               
+                #faq-list-3.collapse(data-bs-parent='.faq-list')
+                  p
+                    | Students can attempt a particular quiz upon submitting their details and entering the testid provided by instructor.
+              |             
+              li(data-aos='fade-up')
+                i.bx.bx-help-circle.icon-help
+                |  
+                a.collapsed(data-bs-toggle='collapse', data-bs-target='#faq-list-4')
+                  | Will i be able to go back to previous question after answering it? 
+                  i.bx.bx-chevron-down.icon-show
+                  i.bx.bx-chevron-up.icon-close
+                |               
+                #faq-list-4.collapse(data-bs-parent='.faq-list')
+                  p
+                    | No,once you attempt a question you  cannot reattempt it.
+              |             
+              li(data-aos='fade-up')
+                i.bx.bx-help-circle.icon-help
+                |  
+                a.collapsed(data-bs-toggle='collapse', data-bs-target='#faq-list-5')
+                  | Can a single instructor create multiple quizzes at a same time? 
+                  i.bx.bx-chevron-down.icon-show
+                  i.bx.bx-chevron-up.icon-close
+                |               
+                #faq-list-5.collapse(data-bs-parent='.faq-list')
+                  p
+                    | Yes,a single instructor can create multiple quizzes at a same time with diiferent names and testids.
+      // End Frequently Asked Questions Section
+    // End #main
+    // ======= Footer =======
+    footer#footer
+      .footer-top
+        .container.text-center
+          .row
+            
+            .footer-links
+              h4 Useful Links
+              |             
+              ul
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Home
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#about') About us
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#services') Services
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Terms of service
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Privacy policy
+            
+      |     
+      .container.text-center
+        .row.text-center
+          .copyright
+            | &copy; Copyright 
+            strong
+              span QuizzBuzz
+            | . All Rights Reserved
+          |         
+          .credits
+           
+            | Frontend template design 
+            a(href='https://bootstrapmade.com/') BootstrapMade
+    // End Footer
+    #preloader
+    |   
+    a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
+    // Vendor JS Files
+    script(src='assets/vendor/aos/aos.js')
+    |   
+    script(src='assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    |   
+    script(src='assets/vendor/glightbox/js/glightbox.min.js')
+    |   
+    script(src='assets/vendor/isotope-layout/isotope.pkgd.min.js')
+    |   
+    
+    script(src='assets/vendor/swiper/swiper-bundle.min.js')
+    // Template Main JS File
+    script(src='assets/js/main.js')
+
+    

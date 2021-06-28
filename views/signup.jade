@@ -1,0 +1,106 @@
+extends header1 
+block content
+    .container.regcont(style="margin-top:80px")
+      form#registerform(action='/users/register', method='post')
+        
+        
+        div
+          h1.text-center Signup
+        p.text-center(style="color:red")=message
+          p.field.text-center
+            | User Name:
+            span * 
+            input(type='text', name='username', required='')
+          p.field.text-center
+            | Firstname:
+            span * 
+            &nbsp;&nbsp;
+            input(type='text', name='firstname', required='')
+          p.field.text-center
+            | Lastname:
+            span * 
+            &nbsp;&nbsp;
+            input(type='text', name='lastname', required='')
+          p.field.text-center
+            |email id :
+            span * 
+            &nbsp; &nbsp;&nbsp;
+            input(type='text', name='email', required='')
+        
+          p.field.text-center
+            | Password:
+            span * 
+            &nbsp;&nbsp;
+            input(type='password', name='password', required='')
+          
+          br
+          
+          p.field.text-center
+            input.click(type='submit', value='Submit')
+    footer#footer
+      .footer-top
+        .container.text-center
+          .row
+            
+            .footer-links
+              h4 Useful Links
+              |             
+              ul
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Home
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#about') About us
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#services') Services
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Terms of service
+                |               
+                span
+                  i.bx.bx-chevron-right
+                  |  
+                  a(href='#') Privacy policy
+            
+      |     
+      .container.text-center
+        .row.text-center
+          .copyright
+            | &copy; Copyright 
+            strong
+              span QuizzBuzz
+            | . All Rights Reserved
+          |         
+          .credits
+           
+            | Frontend template design 
+            a(href='https://bootstrapmade.com/') BootstrapMade
+    // End Footer
+    #preloader
+    |   
+    a.back-to-top.d-flex.align-items-center.justify-content-center(href='#')
+      i.bi.bi-arrow-up-short
+    // Vendor JS Files
+    script(src='../assets/vendor/aos/aos.js')
+    |   
+    script(src='../assets/vendor/bootstrap/js/bootstrap.bundle.min.js')
+    |   
+    script(src='../assets/vendor/glightbox/js/glightbox.min.js')
+    |   
+    script(src='../assets/vendor/isotope-layout/isotope.pkgd.min.js')
+    |   
+    
+    script(src='../assets/vendor/swiper/swiper-bundle.min.js')
+    // Template Main JS File
+    script(src='../assets/js/main.js')
+
+    
